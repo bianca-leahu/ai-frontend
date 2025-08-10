@@ -17,7 +17,7 @@ export default function Hero(props: HeroProps = {}) {
     name = "Bianca Balasiu",
     role = "Frontend Developer",
     blurb = "I craft delightful, accessible, and performant web interfaces. Focused on React, Next.js, and design systems.",
-    resumeUrl = "/placeholder.pdf",
+    resumeUrl = "/resume.pdf",
   } = props
 
   return (
@@ -37,7 +37,7 @@ export default function Hero(props: HeroProps = {}) {
         <p className="text-zinc-400 max-w-xl">{blurb}</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Button asChild className="bg-violet-600 hover:bg-violet-500 text-white">
-            <Link href={resumeUrl} target="_blank">
+            <Link href={resumeUrl} download rel="noopener noreferrer">
               <Download className="h-4 w-4 mr-2" />
               Download Resume
             </Link>
