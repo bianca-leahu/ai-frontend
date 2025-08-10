@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight, Download, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import workstation from "../public/developer-workstation-glassmorphism.png";
 
 type HeroProps = {
   name?: string
@@ -62,7 +63,7 @@ export default function Hero(props: HeroProps = {}) {
         <Card className="relative overflow-hidden border border-zinc-800 bg-zinc-900">
           <CardContent className="p-0">
             <Image
-              src="/developer-workstation-glassmorphism.png"
+              src={workstation}
               alt="Developer workstation illustration"
               width={1200}
               height={900}
