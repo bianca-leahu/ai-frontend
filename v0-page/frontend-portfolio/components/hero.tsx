@@ -3,7 +3,7 @@ import Link from "next/link"
 import { ArrowRight, Download, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import workstation from "../public/developer-workstation-glassmorphism.png";
+import workstation from "../public/developer-workstation-glassmorphism.webp";
 
 type HeroProps = {
   name?: string
@@ -37,10 +37,10 @@ export default function Hero(props: HeroProps = {}) {
         <p className="text-zinc-400 max-w-xl">{blurb}</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Button asChild className="bg-violet-600 hover:bg-violet-500 text-white">
-            <Link href={resumeUrl} download rel="noopener noreferrer">
+            <a href={resumeUrl} download rel="noopener noreferrer">
               <Download className="h-4 w-4 mr-2" />
               Download Resume
-            </Link>
+            </a>
           </Button>
           <Button variant="outline" asChild className="border-zinc-800 bg-zinc-950 text-zinc-100 hover:bg-zinc-900">
             <Link href="#contact">
@@ -65,8 +65,9 @@ export default function Hero(props: HeroProps = {}) {
             <Image
               src={workstation}
               alt="Developer workstation illustration"
-              width={1200}
-              height={900}
+              width={900}
+              height={540}
+              sizes="(max-width: 1024px) 100vw, 900px"
               className="aspect-video object-cover"
               priority
             />
