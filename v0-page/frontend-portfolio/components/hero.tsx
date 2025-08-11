@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import { ArrowRight, Download, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -27,7 +26,10 @@ export default function Hero(props: HeroProps = {}) {
           <Sparkles className="h-3.5 w-3.5 text-violet-400" />
           Available for freelance work
         </div>
-        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+        <h1
+          className="text-4xl sm:text-5xl font-semibold tracking-tight"
+          style={{ fontSize: "2.25rem" }}
+        >
           Hi, I&apos;m{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-teal-300">{name}</span>
           .
@@ -43,10 +45,10 @@ export default function Hero(props: HeroProps = {}) {
             </a>
           </Button>
           <Button variant="outline" asChild className="border-zinc-800 bg-zinc-950 text-zinc-100 hover:bg-zinc-900">
-            <Link href="#contact">
+            <a href="#contact">
               Let&apos;s talk
               <ArrowRight className="h-4 w-4 ml-2" />
-            </Link>
+            </a>
           </Button>
         </div>
         <ul className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm text-zinc-300">
