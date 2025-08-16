@@ -5,6 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/ai-frontend/apexcharts-play/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Interactive analytics dashboard with ApexCharts - featuring revenue trends, performance metrics, and data visualization. Built with React and TypeScript for modern web applications." />
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IHsgU3RyaWN0TW9kZSB9IGZyb20gJ3JlYWN0JwppbXBvcnQgeyBjcmVhdGVSb290IH0gZnJvbSAncmVhY3QtZG9tL2NsaWVudCcKaW1wb3J0ICcuL2luZGV4LmNzcycKaW1wb3J0IEFwcCBmcm9tICcuL0FwcC50c3gnCgpjcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JykhKS5yZW5kZXIoCiAgPFN0cmljdE1vZGU+CiAgICA8QXBwIC8+CiAgPC9TdHJpY3RNb2RlPiwKKQo=" as="script" type="module">
     <meta name="keywords" content="analytics, dashboard, charts, data visualization, apexcharts, react, typescript" />
     <meta name="author" content="Analytics Dashboard" />
     <meta name="robots" content="index, follow" />
@@ -16,10 +24,26 @@
     <meta name="twitter:title" content="Analytics Dashboard - Data Visualization" />
     <meta name="twitter:description" content="Interactive analytics dashboard with ApexCharts - featuring revenue trends, performance metrics, and data visualization." />
     <title>Analytics Dashboard - Data Visualization with ApexCharts</title>
-    <script type="module" crossorigin src="/ai-frontend/apexcharts-play/assets/index-BxcXNceO.js"></script>
-    <link rel="stylesheet" crossorigin href="/ai-frontend/apexcharts-play/assets/index-nMgvfnsi.css">
+    <script type="module" crossorigin src="/ai-frontend/apexcharts-play/assets/index-CKNBLrRu.js"></script>
+    <link rel="modulepreload" crossorigin href="/ai-frontend/apexcharts-play/assets/react-vendor-BcfTfBci.js">
+    <link rel="stylesheet" crossorigin href="/ai-frontend/apexcharts-play/assets/index-Crr7dpOW.css">
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/ai-frontend/apexcharts-play/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
